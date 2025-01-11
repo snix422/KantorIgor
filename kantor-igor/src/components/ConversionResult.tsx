@@ -1,17 +1,12 @@
-import { useState } from "react"
 
-const ConversionResult = () => {
-    const [resultCurrency,setResultCurrency] = useState<string>("")
+interface ConversionResultProps {
+    currencies:any,
+    resultCurrency:any,
+    setResultCurrency:any
+}
 
-    const currencies = [{
-        name:"Euro"
-    },{
-        name:"Dolar"
-    },{
-        name:"Złoty Polski"
-    }]
-
-    console.log(resultCurrency)
+const ConversionResult : React.FC<ConversionResultProps> = ({currencies,resultCurrency,setResultCurrency}) => {
+    
     return(
         <div>
             <select value={resultCurrency} onChange={(e:any)=>setResultCurrency(e.target.value)}>

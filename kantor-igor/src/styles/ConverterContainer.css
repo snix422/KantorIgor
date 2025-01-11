@@ -1,5 +1,12 @@
 .container {
     width: 50vw;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exchange-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
